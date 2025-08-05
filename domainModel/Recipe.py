@@ -1,15 +1,15 @@
 import datetime
 
 class Recipe:
-    def __init__(self, id, name, author, date=datetime.datetime.now().replace(microsecond=0), ingredients=[]):
-        self.__id = id
+    def __init__(self, r_id, name, author, date=datetime.datetime.now().replace(microsecond=0), ingredients=[]):
+        self.__id = r_id
         self._name = name
         self._author = author
         self._ingredients = ingredients
         self._description = ""
         self._instructions = []
         self._cook_time = "TBD"
-        self._category = []
+        self.__category = []
         self._createdDate = date
 
     def __str__(self):
@@ -19,8 +19,8 @@ class Recipe:
         self._description = description
 
     def add_category(self, category):
-        if category not in self._category:
-            self._category.append(category)
+        if category not in self.__category:
+            self.__category.append(category)
             return True
         return False
 

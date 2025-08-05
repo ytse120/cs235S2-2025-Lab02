@@ -7,6 +7,9 @@ class Category:
     def __str__(self):
         return "<Category " + str(self.__id) + ": " + self.__name + ">"
 
+    def __len__(self):
+        return len(self.__recipes)
+
     def print_recipe(self):
         print("Category " + self.__name + " has the following associated recipes: " + str([str(r) for r in self.__recipes]))
 
