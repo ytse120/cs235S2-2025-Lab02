@@ -8,7 +8,7 @@ class Category:
         return "<Category " + str(self.__id) + ": " + self.__name + ">"
 
     def print_recipe(self):
-        print("Category " + self.__name + " has the following associated recipes: " + str(self.__recipes))
+        print("Category " + self.__name + " has the following associated recipes: " + str([str(r) for r in self.__recipes]))
 
     def add_recipe(self, recipe):
         if recipe not in self.__recipes:
